@@ -1,0 +1,35 @@
+.fontWeightBold {
+    font-weight: bold;
+}
+
+.ml2 {
+	margin-left: 0.5rem;
+}
+
+.py5 {
+    padding: 3rem 0 3rem 0;
+}
+
+.p3 {
+    padding: 1rem;
+}
+
+.py3 {
+    padding: 1rem 0 1rem 0;
+}
+
+.py2 {
+	padding: 0.5rem 0 0.5rem 0;
+}
+
+.py1 {
+	padding: 0.25rem 0 0.25rem 0;
+}
+
+.bgLight {
+    background-color: #f8f9fa;
+}
+
+.textPrimary {
+    color: #007bff;
+}
