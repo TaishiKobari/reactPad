@@ -43,7 +43,9 @@ const Edit = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(`/api/edit/${memoId}`);
+                const res = await fetch(
+                    `https://express-pad.herokuapp.com/api/edit/${memoId}`
+                );
                 const data = await res.json();
                 dispatch({ type: 'TITLE', title: data.pageTitle });
                 dispatch({ type: 'TARGETMEMO', targetMemo: data.targetMemo });
@@ -84,8 +86,8 @@ const Form = ({ targetMemo }) => {
     const { title, memo } = values;
 
     const handleSubmit = async (e) => {
-		e.preventDefault();
-		// console.log(values);
+        e.preventDefault();
+        // console.log(values);
         try {
             const init = {
                 method: 'POST',
@@ -94,7 +96,10 @@ const Form = ({ targetMemo }) => {
                     'Content-Type': 'application/json',
                 },
             };
-            await fetch(`/api/edit/${targetMemo._id}`, init);
+            await fetch(
+                `https://express-pad.herokuapp.com/api/edit/${targetMemo._id}`,
+                init
+            );
             history.push('/');
         } catch (err) {
             console.error(err);
@@ -109,7 +114,7 @@ const Form = ({ targetMemo }) => {
         <Container
             as="form"
             fluid="xl"
-            action={`/api/edit/${targetMemo._id}`}
+            action={`https://express-pad.herokuapp.com/api/edit/${targetMemo._id}`}
             method="post"
             onSubmit={handleSubmit}
         >

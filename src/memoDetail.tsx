@@ -43,7 +43,9 @@ const MemoDetail = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(`/api/${memoId}`);
+                const res = await fetch(
+                    `https://express-pad.herokuapp.com/api/${memoId}`
+                );
                 const data = await res.json();
                 dispatch({ type: 'TITLE', title: data.pageTitle });
                 dispatch({ type: 'TARGETMEMO', targetMemo: data.targetMemo });

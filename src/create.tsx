@@ -51,7 +51,7 @@ const Form = () => {
                     'Content-Type': 'application/json',
                 },
             };
-            await fetch('/api/new', init);
+            await fetch('https://express-pad.herokuapp.com/api/new', init);
             history.push('/');
         } catch (err) {
             console.error(err);
@@ -66,7 +66,7 @@ const Form = () => {
         <Container
             as="form"
             fluid="xl"
-            action="/api/new"
+            action="https://express-pad.herokuapp.com/api/new"
             method="post"
             onSubmit={handleSubmit}
         >

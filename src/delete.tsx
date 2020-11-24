@@ -44,7 +44,9 @@ const Delete = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(`/api/delete/${memoId}`);
+                const res = await fetch(
+                    `https://express-pad.herokuapp.com/api/delete/${memoId}`
+                );
                 const data = await res.json();
                 dispatch({ type: 'TITLE', title: data.pageTitle });
                 dispatch({ type: 'TARGETMEMO', targetMemo: data.targetMemo });
@@ -104,7 +106,7 @@ const Form = ({ targetMemo }) => {
         <Container
             as="form"
             fluid="xl"
-            action={`/api/delete/${targetMemo._id}`}
+            action={`https://express-pad.herokuapp.com/api/delete/${targetMemo._id}`}
             method="post"
         >
             <Row className={styles.py2}>

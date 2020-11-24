@@ -31,7 +31,9 @@ const Main = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch('/api');
+                const res = await fetch(
+                    'https://express-pad.herokuapp.com/api'
+                );
                 const data = await res.json();
                 dispatch({ type: 'TITLE', title: data.pageTitle });
                 dispatch({ type: 'ITEM', item: data.memoItems });
