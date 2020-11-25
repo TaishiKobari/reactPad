@@ -10,15 +10,25 @@ import styles from './Main.module.css';
 
 import Header from './header';
 
+import {
+    defaultItem,
+    SeveralMemoState,
+    SeveralMEmoAction,
+    MemoContentProps,
+} from './type';
+
 const initialState = { pageTitle: '', item: [] };
 
-const reducer = (state, action) => {
-    const { pageTitle, item } = state;
-    switch (action.type) {
+const reducer: React.Reducer<SeveralMemoState, SeveralMEmoAction> = (
+    state,
+    action
+) => {
+    const { type, payload } = action;
+    switch (type) {
         case 'TITLE':
-            return { pageTitle: action.title, item: item };
+            return { ...state, pageTitle: payload.pageTitle };
         case 'ITEM':
-            return { pageTitle: pageTitle, item: action.item };
+            return { ...state, item: payload.item };
         default:
             throw new Error();
     }
@@ -35,8 +45,14 @@ const Main = () => {
                     'https://express-pad.herokuapp.com/api'
                 );
                 const data = await res.json();
-                dispatch({ type: 'TITLE', title: data.pageTitle });
-                dispatch({ type: 'ITEM', item: data.memoItems });
+                dispatch({
+                    type: 'TITLE',
+                    payload: { pageTitle: data.pageTitle, item: defaultItem },
+                });
+                dispatch({
+                    type: 'ITEM',
+                    payload: { pageTitle: '', item: data.memoItems },
+                });
             } catch (err) {
                 console.error(err);
             }
@@ -87,7 +103,7 @@ const Main = () => {
     );
 };
 
-const MemoContent = ({ memoItems }) => {
+const MemoContent: React.FC<MemoContentProps> = ({ memoItems }) => {
     const memoContents = memoItems.map((memo, index) => {
         if (index % 2 === 0) {
             return (

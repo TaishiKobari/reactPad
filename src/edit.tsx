@@ -11,6 +11,8 @@ import styles from './Main.module.css';
 
 import Header from './header';
 
+import { defaultMemo, OneMemoState, OneMemoAction, FormProps } from './type';
+
 const initialState = {
     pageTitle: '',
     targetMemo: {
@@ -22,13 +24,13 @@ const initialState = {
     },
 };
 
-const reducer = (state, action) => {
-    const { pageTitle, targetMemo } = state;
-    switch (action.type) {
+const reducer: React.Reducer<OneMemoState, OneMemoAction> = (state, action) => {
+    const { type, payload } = action;
+    switch (type) {
         case 'TITLE':
-            return { pageTitle: action.title, targetMemo: targetMemo };
+            return { ...state, pageTitle: payload.pageTitle };
         case 'TARGETMEMO':
-            return { pageTitle: pageTitle, targetMemo: action.targetMemo };
+            return { ...state, targetMemo: payload.targetMemo };
         default:
             throw new Error();
     }
@@ -47,8 +49,17 @@ const Edit = () => {
                     `https://express-pad.herokuapp.com/api/edit/${memoId}`
                 );
                 const data = await res.json();
-                dispatch({ type: 'TITLE', title: data.pageTitle });
-                dispatch({ type: 'TARGETMEMO', targetMemo: data.targetMemo });
+                dispatch({
+                    type: 'TITLE',
+                    payload: {
+                        pageTitle: data.pageTitle,
+                        targetMemo: defaultMemo,
+                    },
+                });
+                dispatch({
+                    type: 'TARGETMEMO',
+                    payload: { pageTitle: '', targetMemo: data.targetMemo },
+                });
             } catch (err) {
                 console.error(err);
             }
@@ -76,7 +87,7 @@ const Edit = () => {
     );
 };
 
-const Form = ({ targetMemo }) => {
+const Form: React.FC<FormProps> = ({ targetMemo }) => {
     let history = useHistory();
     const initialValue = {
         title: '',
@@ -85,7 +96,9 @@ const Form = ({ targetMemo }) => {
     const [values, setValues] = useState(initialValue);
     const { title, memo } = values;
 
-    const handleSubmit = async (e) => {
+    const handleSubmit: (
+        event: React.FormEvent<HTMLFormElement>
+    ) => void = async (e) => {
         e.preventDefault();
         // console.log(values);
         try {
@@ -106,7 +119,9 @@ const Form = ({ targetMemo }) => {
         }
     };
 
-    const handleChange = (e) => {
+    const handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void = (
+        e
+    ) => {
         setValues({ ...values, [e.target.name]: e.target.value });
     };
 

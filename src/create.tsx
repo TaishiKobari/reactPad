@@ -41,7 +41,9 @@ const Form = () => {
     const [values, setValues] = useState(initialValue);
     const { title, memo } = values;
 
-    const handleSubmit = async (e) => {
+    const handleSubmit: (
+        event: React.FormEvent<HTMLFormElement>
+    ) => void = async (e) => {
         e.preventDefault();
         try {
             const init = {
@@ -58,7 +60,9 @@ const Form = () => {
         }
     };
 
-    const handleChange = (e) => {
+    const handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void = (
+        e
+    ) => {
         setValues({ ...values, [e.target.name]: e.target.value });
     };
 

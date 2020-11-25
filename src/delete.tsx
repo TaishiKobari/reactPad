@@ -12,6 +12,8 @@ import styles from './Main.module.css';
 
 import Header from './header';
 
+import { defaultMemo, OneMemoState, OneMemoAction, FormProps } from './type';
+
 const initialState = {
     pageTitle: '',
     targetMemo: {
@@ -23,13 +25,13 @@ const initialState = {
     },
 };
 
-const reducer = (state, action) => {
-    const { pageTitle, targetMemo } = state;
-    switch (action.type) {
+const reducer: React.Reducer<OneMemoState, OneMemoAction> = (state, action) => {
+    const { type, payload } = action;
+    switch (type) {
         case 'TITLE':
-            return { pageTitle: action.title, targetMemo: targetMemo };
+            return { ...state, pageTitle: payload.pageTitle };
         case 'TARGETMEMO':
-            return { pageTitle: pageTitle, targetMemo: action.targetMemo };
+            return { ...state, targetMemo: payload.targetMemo };
         default:
             throw new Error();
     }
@@ -48,8 +50,17 @@ const Delete = () => {
                     `https://express-pad.herokuapp.com/api/delete/${memoId}`
                 );
                 const data = await res.json();
-                dispatch({ type: 'TITLE', title: data.pageTitle });
-                dispatch({ type: 'TARGETMEMO', targetMemo: data.targetMemo });
+                dispatch({
+                    type: 'TITLE',
+                    payload: {
+                        pageTitle: data.pageTitle,
+                        targetMemo: defaultMemo,
+                    },
+                });
+                dispatch({
+                    type: 'TARGETMEMO',
+                    payload: { pageTitle: '', targetMemo: data.targetMemo },
+                });
             } catch (err) {
                 console.error(err);
             }
@@ -101,7 +112,7 @@ const Delete = () => {
     );
 };
 
-const Form = ({ targetMemo }) => {
+const Form: React.FC<FormProps> = ({ targetMemo }) => {
     return (
         <Container
             as="form"
