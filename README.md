@@ -3,13 +3,13 @@
 # Reactメモ帳
 
 - Front-end
-  - React.js
-  - TypeScript
-  - Netlify(deploy)
+  - [React.js](https://ja.reactjs.org/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [Netlify](https://www.netlify.com/)(deploy)
 - Back-end
-  - Express.js
-  - MongoDB Atlas
-  - Heroku(deploy)
+  - [Express.js](https://expressjs.com/ja/)
+  - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+  - [Heroku](https://www.heroku.com/)(deploy)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
