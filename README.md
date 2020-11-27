@@ -2,7 +2,7 @@
 
 # Reactメモ帳
 
-- Front-end
+- Front-end(This repository: https://github.com/TaishiKobari/reactPad)
   - [React.js](https://ja.reactjs.org/)
   - [TypeScript](https://www.typescriptlang.org/)
   - [Netlify](https://www.netlify.com/)(deploy)
@@ -11,9 +11,9 @@
   - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
   - [Heroku](https://www.heroku.com/)(deploy)
 
-This repository only has client side code.
+[This repository](https://github.com/TaishiKobari/reactPad) only has client side code.
 
-The server side GitHub repository is [here](https://github.com/TaishiKobari/expressPad)
+The server side GitHub repository is [here](https://github.com/TaishiKobari/expressPad).
 
 ## Available Scripts
 
