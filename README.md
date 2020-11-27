@@ -2,11 +2,11 @@
 
 # Reactメモ帳
 
-- Front-end
+- Front-end(This repository: https://github.com/TaishiKobari/reactPad)
   - [React.js](https://ja.reactjs.org/)
   - [TypeScript](https://www.typescriptlang.org/)
   - [Netlify](https://www.netlify.com/)(deploy)
-- Back-end
+- Back-end(repository: https://github.com/TaishiKobari/expressPad)
   - [Express.js](https://expressjs.com/ja/)
   - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
   - [Heroku](https://www.heroku.com/)(deploy)
@@ -17,31 +17,27 @@ The server side GitHub repository is [here](https://github.com/TaishiKobari/expr
 
 ## App URL
 
-### **Front-end: https://github.com/TaishiKobari/reactPad**
-### **Back-end: https://github.com/TaishiKobari/expressPad**
+### **https://clever-villani-c52831.netlify.app/**
 
-### `npm start`
+## Design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[React Bootstrap](https://react-bootstrap.github.io/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The basic UI is referenced from "[SE１年目のJavaScript Webアプリケーションフレームワーク道...Expressで簡易メモ帳アプリ(1)](https://qiita.com/Ponzmild/items/900c0403adbad7b843e6)".
 
-### `npm test`
+## Client Side Routing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[React Router Dom](https://reactrouter.com/web/guides/quick-start)
 
-### `npm run build`
+- dashboard: [/](https://clever-villani-c52831.netlify.app/) (that is https://clever-villani-c52831.netlify.app/ .)
+- create: [/create](https://clever-villani-c52831.netlify.app/create)
+- detail: /:memoId
+- edit: /edit/:memoId
+- delete: /delete/:memoId
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## data fetching
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Fetch API](https://developer.mozilla.org/ja/docs/Web/API/Fetch_API/Using_Fetch)
 
 ### `npm run eject`
 
