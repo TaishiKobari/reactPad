@@ -29,11 +29,12 @@ The basic UI is referenced from "[SE１年目のJavaScript Webアプリケーシ
 
 [React Router Dom](https://reactrouter.com/web/guides/quick-start)
 
-- dashboard: [/](https://clever-villani-c52831.netlify.app/) (that is https://clever-villani-c52831.netlify.app/ .)
-- create: [/create](https://clever-villani-c52831.netlify.app/create)
-- detail: /:memoId
-- edit: /edit/:memoId
-- delete: /delete/:memoId
+Routing -[to code](https://github.com/TaishiKobari/reactPad/blob/df99d03c877dbb344036a17230eb1f790b03958f/src/index.tsx#L15)
+- dashboard: [/](https://clever-villani-c52831.netlify.app/) (that is https://clever-villani-c52831.netlify.app/ .) -[to code](https://github.com/TaishiKobari/reactPad/blob/df99d03c877dbb344036a17230eb1f790b03958f/src/main.tsx#L37)
+- create: [/create](https://clever-villani-c52831.netlify.app/create) -[to code](https://github.com/TaishiKobari/reactPad/blob/df99d03c877dbb344036a17230eb1f790b03958f/src/create.tsx#L14)
+- detail: /:memoId -[to code](https://github.com/TaishiKobari/reactPad/blob/df99d03c877dbb344036a17230eb1f790b03958f/src/memoDetail.tsx#L39)
+- edit: /edit/:memoId -[to code](https://github.com/TaishiKobari/reactPad/blob/df99d03c877dbb344036a17230eb1f790b03958f/src/edit.tsx#L39)
+- delete: /delete/:memoId -[to code](https://github.com/TaishiKobari/reactPad/blob/df99d03c877dbb344036a17230eb1f790b03958f/src/delete.tsx#L40)
 
 ## data fetching
 
