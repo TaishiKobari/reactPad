@@ -17,8 +17,8 @@ The server side GitHub repository is [here](https://github.com/TaishiKobari/expr
 
 ## App URL
 
-### **[Front-end](https://github.com/TaishiKobari/reactPad)**
-### **[Back-end](https://github.com/TaishiKobari/expressPad)**
+### **Front-end: https://github.com/TaishiKobari/reactPad**
+### **Back-end: https://github.com/TaishiKobari/expressPad**
 
 ### `npm start`
 
