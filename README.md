@@ -2,11 +2,11 @@
 
 # Reactメモ帳
 
-- Front-end(This repository: https://github.com/TaishiKobari/reactPad)
+- Front-end
   - [React.js](https://ja.reactjs.org/)
   - [TypeScript](https://www.typescriptlang.org/)
   - [Netlify](https://www.netlify.com/)(deploy)
-- Back-end(https://github.com/TaishiKobari/expressPad)
+- Back-end
   - [Express.js](https://expressjs.com/ja/)
   - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
   - [Heroku](https://www.heroku.com/)(deploy)
@@ -15,9 +15,10 @@
 
 The server side GitHub repository is [here](https://github.com/TaishiKobari/expressPad).
 
-## Available Scripts
+## App URL
 
-In the project directory, you can run:
+### **[Front-end](https://github.com/TaishiKobari/reactPad)**
+### **[Back-end](https://github.com/TaishiKobari/expressPad)**
 
 ### `npm start`
 
