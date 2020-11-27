@@ -36,22 +36,24 @@ Routing -[to code](https://github.com/TaishiKobari/reactPad/blob/df99d03c877dbb3
 - edit: /edit/:memoId -[to code](https://github.com/TaishiKobari/reactPad/blob/df99d03c877dbb344036a17230eb1f790b03958f/src/edit.tsx#L39)
 - delete: /delete/:memoId -[to code](https://github.com/TaishiKobari/reactPad/blob/df99d03c877dbb344036a17230eb1f790b03958f/src/delete.tsx#L40)
 
-## data fetching
+## Data Fetching
 
 [Fetch API](https://developer.mozilla.org/ja/docs/Web/API/Fetch_API/Using_Fetch)
 
-### `npm run eject`
+e.g. POST new memo using Fetch. -[to code](https://github.com/TaishiKobari/reactPad/blob/ac7161f150f9b3facd745fa749ceb9c09f163868/src/create.tsx#L56)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Form (Controlled Components)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+e.g. Controlling <input> tag and submission of <form> tag. -[to code](https://github.com/TaishiKobari/reactPad/blob/ac7161f150f9b3facd745fa749ceb9c09f163868/src/create.tsx#L35)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## React Hooks
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- useState()
+- useEffect()
+- useReducer()
 
-## Learn More
+e.g. fetching all memo data in every rendering. -[to code](https://github.com/TaishiKobari/reactPad/blob/ac7161f150f9b3facd745fa749ceb9c09f163868/src/main.tsx#L41)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## TypeScript
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+e.g. defining type of memo which is fetched from server. -[to code](https://github.com/TaishiKobari/reactPad/blob/ac7161f150f9b3facd745fa749ceb9c09f163868/src/type.tsx#L1)
