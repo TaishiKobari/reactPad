@@ -44,7 +44,7 @@ e.g. POST new memo using Fetch. -[to code](https://github.com/TaishiKobari/react
 
 ## Form (Controlled Components)
 
-e.g. Controlling <input> tag and submission of <form> tag. -[to code](https://github.com/TaishiKobari/reactPad/blob/ac7161f150f9b3facd745fa749ceb9c09f163868/src/create.tsx#L35)
+e.g. Controlling input tag and submission of form tag. -[to code](https://github.com/TaishiKobari/reactPad/blob/ac7161f150f9b3facd745fa749ceb9c09f163868/src/create.tsx#L35)
 
 ## React Hooks
 
