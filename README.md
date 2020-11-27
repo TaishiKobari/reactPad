@@ -1,5 +1,15 @@
 ![React-Pad](https://user-images.githubusercontent.com/70504137/100419052-155d6700-30c7-11eb-8e23-53bb96ae5efa.png)
-# Getting Started with Create React App
+
+# Reactメモ帳
+
+- Front-end
+  - React.js
+  - TypeScript
+  - Netlify(deploy)
+- Back-end
+  - Express.js
+  - MongoDB Atlas
+  - Heroku(deploy)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
