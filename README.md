@@ -8,6 +8,7 @@
   - [Netlify](https://www.netlify.com/)(deploy)
 - Back-end(repository: https://github.com/TaishiKobari/expressPad)
   - [Express.js](https://expressjs.com/ja/)
+  - [TypeScript](https://www.typescriptlang.org/) (2020/12/4 added)
   - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
   - [Heroku](https://www.heroku.com/)(deploy)
 
